@@ -1,0 +1,270 @@
+/* ===== Cores do protótipo (PDF) ===== */
+:root {
+    --verde-escuro: #12291d;
+    --verde: #1f7a4a;
+    --amarelo: #f2c230;
+    --fundo: #f2efe7;
+    --card: #faf9f5;
+    --borda: #e0ddd3;
+    --texto: #1c2620;
+    --cinza: #6b6f68;
+    --vermelho: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+h1, h2 { margin: 0 0 12px; }
+h2 { font-size: 18px; }
+
+/* ===== Cabeçalho ===== */
+header {
+    background: var(--verde-escuro);
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 4px solid var(--verde);
+}
+header h1 { font-size: 24px; margin: 0; }
+header p { margin: 4px 0 0; color: #c9d6cd; font-size: 14px; }
+
+nav button {
+    background: #2b4a39;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+nav button:hover { background: var(--verde); }
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+/* ===== Telas: só a que tem "ativa" aparece ===== */
+.tela { display: none; }
+.tela.ativa { display: block; }
+.escondido { display: none; }
+
+/* ===== Cards e grades ===== */
+.card {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+.destaque { border: 2px solid var(--verde-escuro); }
+.centro { text-align: center; }
+
+.grade {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+#detalhes-jogador { grid-template-columns: 1fr 1fr 1fr; }
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.indicadores span { font-weight: bold; }
+.indicadores strong { float: right; font-size: 28px; color: var(--verde); }
+.indicadores small { color: var(--cinza); }
+
+/* Barra de progresso: a largura da div interna é definida pelo JS */
+.barra {
+    background: #dcd9cf;
+    height: 7px;
+    border-radius: 4px;
+    margin: 8px 0;
+    clear: both;
+}
+.barra div {
+    background: var(--verde);
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Linha "rótulo ............ valor" */
+.linha {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.linha.total { border-top: 1px solid var(--borda); padding-top: 8px; }
+
+.sutil { color: var(--cinza); font-size: 13px; }
+.dinheiro { color: var(--verde); }
+.negativo { color: var(--vermelho); }
+.erro { color: var(--vermelho); }
+.aviso { background: #fdf3d3; padding: 6px 8px; border-radius: 6px; font-size: 14px; }
+
+.perk {
+    display: inline-block;
+    background: var(--amarelo);
+    border: 1px solid #8a6d10;
+    padding: 4px 9px;
+    border-radius: 5px;
+    margin: 3px 3px 3px 0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: help;
+}
+
+/* ===== Formulários e botões ===== */
+label { display: block; margin: 14px 0 5px; font-size: 13px; color: var(--cinza); }
+select, input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background: white;
+    font-size: 15px;
+}
+input[type="range"] { width: 100%; accent-color: var(--verde-escuro); }
+
+button { font-size: 15px; }
+.botao-amarelo, .botao-verde {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+.botao-amarelo { background: var(--amarelo); color: var(--texto); }
+.botao-amarelo:hover { background: #e0b11f; }
+.botao-verde { background: var(--verde); color: white; }
+.botao-verde:hover { background: #18633b; }
+
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 2px;
+}
+
+/* ===== Tabelas ===== */
+.rolagem { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: #ebe8df; color: var(--cinza); font-size: 12px; text-align: left; }
+th, td { padding: 9px; border-bottom: 1px solid var(--borda); }
+td a { color: var(--texto); font-weight: bold; }
+.numero { color: var(--verde); font-weight: bold; }
+.meu-time { background: #e3f1e8; font-weight: bold; }
+
+/* ===== Confronto / placar ===== */
+.confronto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+}
+.confronto div { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.escudo { font-size: 34px; }
+.vs { color: var(--cinza); font-weight: bold; }
+.placar-numero { font-size: 46px; font-weight: bold; }
+
+.selo { display: inline-block; padding: 5px 14px; border-radius: 5px; font-weight: bold; }
+.selo.vitoria { background: var(--amarelo); }
+.selo.empate  { background: #dcd9cf; }
+.selo.derrota { background: var(--vermelho); color: white; }
+
+/* ===== Campo da escalação ===== */
+.campo {
+    background: #2e7d4f;
+    border: 3px solid white;
+    outline: 2px solid #2e7d4f;
+    border-radius: 6px;
+    padding: 18px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.linha-campo { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.vaga {
+    background: white;
+    border-radius: 8px;
+    padding: 6px;
+    width: 150px;
+    text-align: center;
+}
+.vaga.fora-posicao { background: #ffe1dc; }
+.vaga select { font-size: 13px; padding: 5px; }
+.posicao {
+    display: inline-block;
+    background: var(--amarelo);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+/* ===== Login ===== */
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 760px;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+}
+.login-lado {
+    background: var(--verde-escuro);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-lado p { color: #c9d6cd; }
+.login-form { background: var(--card); padding: 30px; }
+
+/* ===== Jogador ===== */
+.avatar { font-size: 60px; }
+.overall-grande {
+    display: inline-block;
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .grade, #detalhes-jogador, .login { grid-template-columns: 1fr; }
+    .indicadores { grid-template-columns: repeat(2, 1fr); }
+    .placar-numero { font-size: 34px; }
+    .vaga { width: 130px; }
+    nav button { margin: 0 6px 0 0; }
+}
+
+/* Ajustes de visualização estática */
+.escondido { display: none !important; }
+.tela { display: none; }
+.tela.ativa { display: block; }
+nav button { cursor: pointer; }
+a[data-go] { cursor: pointer; }
+.vaga { min-width: 95px; }
+@media (max-width: 800px) { .linha-campo { gap: 6px; } }
