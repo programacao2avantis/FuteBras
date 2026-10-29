@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuteBras - Jogador</title>
+    <!-- comum.css primeiro (base), depois o CSS só desta página -->
+    <link rel="stylesheet" href="comum.css">
+    <link rel="stylesheet" href="jogador.css">
+</head>
+<body>
+<!-- PROTÓTIPO NÃO FUNCIONAL: dados fictícios escritos direto no HTML. Só os links de navegação funcionam. -->
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+    <div>
+        <h1>⚽ FuteBras</h1>
+        <p>Técnico e dirigente</p>
+    </div>
+    <nav>
+        <a href="painel.html">Painel</a>
+        <a href="escalacao.html">Escalação</a>
+        <a href="partida.html">Partida</a>
+        <a href="jogador.html" class="ativo">Jogadores</a>
+        <a href="index.html">Sair</a>
+    </nav>
+</header>
+
+<main>
+    <h2>👤 Detalhes do jogador</h2>
+
+    <!-- protótipo: sempre mostra o mesmo jogador (Lucas) -->
+    <div class="barra-jogadores">
+        <a class="botao-pequeno" href="jogador.html" aria-label="Jogador anterior">◀</a>
+        <select aria-label="Escolher jogador"><option>Lucas (ATA)</option></select>
+        <a class="botao-pequeno" href="jogador.html" aria-label="Próximo jogador">▶</a>
+    </div>
+
+    <div class="grade" id="detalhes-jogador">
+
+        <div class="coluna">
+            <div class="card centro">
+                <div class="avatar">👤</div>
+                <h2>Lucas</h2>
+                <p class="sutil">ATA • 24 anos</p>
+                <div class="overall-grande">83</div>
+                <p><span class="perk" title="+3 de overall em campo">Casca-grossa</span></p>
+                <p class="sutil">Titular</p>
+            </div>
+
+            <div class="card">
+                <h2>📄 Informações</h2>
+
+                <label for="campo-nome">Nome</label>
+                <input id="campo-nome" type="text" value="Lucas">
+
+                <label for="campo-posicao">Posição</label>
+                <select id="campo-posicao">
+                    <option>GOL</option><option>ZAG</option><option>MEI</option><option selected>ATA</option>
+                </select>
+
+                <label for="campo-perk">Perk</label>
+                <select id="campo-perk">
+                    <option>Sem perk</option>
+                    <option selected>Casca-grossa — +3 de overall em campo</option>
+                    <option>Amarelão — -3 de overall em campo</option>
+                    <option>Marrento — +2 de overall, mas no banco derruba a moral</option>
+                    <option>Pegador de pênalti — reduz a chance de gol do adversário</option>
+                </select>
+
+                <label for="campo-idade">Idade</label>
+                <input id="campo-idade" type="number" value="24">
+
+                <label for="campo-salario">Salário por rodada (R$)</label>
+                <input id="campo-salario" type="number" value="25000">
+
+                <p class="linha"><span>Jogos na temporada</span><b>3</b></p>
+                <p class="linha"><span>Gols na temporada</span><b>3</b></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📊 Habilidades (1 a 10)</h2>
+                <div class="hab-controle">
+                    <label for="hab-0"><span>Finalização</span><span><b>9</b></span></label>
+                    <input id="hab-0" type="range" min="1" max="10" step="1" value="9">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-1"><span>Drible</span><span><b>8</b></span></label>
+                    <input id="hab-1" type="range" min="1" max="10" step="1" value="8">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-2"><span>Passe</span><span><b>6</b></span></label>
+                    <input id="hab-2" type="range" min="1" max="10" step="1" value="6">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-3"><span>Marcação</span><span><b>3</b></span></label>
+                    <input id="hab-3" type="range" min="1" max="10" step="1" value="3">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-4"><span>Desarme</span><span><b>3</b></span></label>
+                    <input id="hab-4" type="range" min="1" max="10" step="1" value="3">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-5"><span>Velocidade</span><span><b>8</b></span></label>
+                    <input id="hab-5" type="range" min="1" max="10" step="1" value="8">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-6"><span>Resistência</span><span><b>8</b></span></label>
+                    <input id="hab-6" type="range" min="1" max="10" step="1" value="8">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-7"><span>Força</span><span><b>8</b></span></label>
+                    <input id="hab-7" type="range" min="1" max="10" step="1" value="8">
+                </div>
+                <div class="hab-controle">
+                    <label for="hab-8"><span>Goleiro</span><span><b>1</b></span></label>
+                    <input id="hab-8" type="range" min="1" max="10" step="1" value="1">
+                </div>
+        </div>
+
+        <div class="coluna">
+            <div class="card">
+                <h2>🔁 Overall por posição</h2>
+                <p class="sutil">Cada posição usa habilidades diferentes</p>
+                <p class="linha"><span>GOL</span><b>10</b></p>
+                <p class="linha"><span>ZAG</span><b>47</b></p>
+                <p class="linha"><span>MEI</span><b>73</b></p>
+                <p class="linha melhor"><span>ATA <small class="sutil">(posição atual)</small></span><b>83</b></p>
+                <p class="linha total"><span>Overall do clube</span><b>78</b></p>
+                <p class="linha"><span>Folha salarial por rodada</span><b>R$ 212.000</b></p>
+            </div>
+
+            <div class="card">
+                <h2>💾 Ajustes</h2>
+                <p class="sutil">Nenhuma alteração</p>
+                <a class="botao-amarelo" href="jogador.html">Salvar alterações</a>
+                <a class="botao-cinza" href="jogador.html">Descartar alterações</a>
+                <a class="botao-cinza" href="jogador.html">Voltar aos valores originais</a>
+            </div>
+
+            <a class="botao-verde" href="escalacao.html">Ir para a escalação</a>
+            <a class="botao-cinza" href="painel.html">Voltar ao painel</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

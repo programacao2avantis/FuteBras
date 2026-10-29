@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuteBras - Painel</title>
+    <!-- comum.css primeiro (base), depois o CSS só desta página -->
+    <link rel="stylesheet" href="comum.css">
+    <link rel="stylesheet" href="painel.css">
+</head>
+<body>
+<!-- PROTÓTIPO NÃO FUNCIONAL: dados fictícios escritos direto no HTML. Só os links de navegação funcionam. -->
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+    <div>
+        <h1>⚽ FuteBras</h1>
+        <p>Técnico e dirigente</p>
+    </div>
+    <nav>
+        <a href="painel.html" class="ativo">Painel</a>
+        <a href="escalacao.html">Escalação</a>
+        <a href="partida.html">Partida</a>
+        <a href="jogador.html">Jogadores</a>
+        <a href="index.html">Sair</a>
+    </nav>
+</header>
+
+<main>
+    <div class="indicadores">
+        <div class="card"><span>Overall</span><strong>78</strong>
+            <div class="barra"><div style="width:78%"></div></div><small>Nível geral do clube</small></div>
+        <div class="card"><span>Moral</span><strong>64</strong>
+            <div class="barra"><div style="width:64%"></div></div><small>Situação regular</small></div>
+        <div class="card"><span>Entrosamento</span><strong>68</strong>
+            <div class="barra"><div style="width:68%"></div></div><small>Cresce jogando com o mesmo time</small></div>
+        <div class="card"><span>Reputação</span><strong>60</strong>
+            <div class="barra"><div style="width:60%"></div></div><small>Reputação do técnico</small></div>
+    </div>
+
+    <div class="grade">
+        <div class="coluna">
+            <div class="card">
+                <h2>👔 Técnico</h2>
+                <p class="linha"><span>Nome</span><b>Vanderlei</b></p>
+                <p class="linha"><span>Reputação</span><b>60</b></p>
+                <p class="sutil">PERKS</p>
+                <div>
+                    <span class="perk" title="+2 no ataque do time">Copeiro</span>
+                    <span class="perk" title="derrota tira metade da moral">Paizão</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>👥 Elenco <small class="sutil">clique no nome para ver o jogador</small></h2>
+                <div class="rolagem">
+                    <table>
+                        <thead>
+                            <tr><th>Jogador</th><th>Pos.</th><th>OVR</th><th>Perk</th><th>Situação</th><th>J</th><th>G</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><a href="jogador.html">André</a></td><td>GOL</td><td class="numero">80</td><td>Pegador de pênalti</td><td>Titular</td><td>3</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Marcos</a></td><td>GOL</td><td class="numero">70</td><td>-</td><td>Reserva</td><td>0</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Bruno</a></td><td>ZAG</td><td class="numero">73</td><td>Casca-grossa</td><td>Titular</td><td>3</td><td>1</td></tr>
+                            <tr><td><a href="jogador.html">Felipe</a></td><td>ZAG</td><td class="numero">70</td><td>-</td><td>Titular</td><td>3</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Thiago</a></td><td>ZAG</td><td class="numero">73</td><td>-</td><td>Titular</td><td>3</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Gustavo</a></td><td>ZAG</td><td class="numero">67</td><td>-</td><td>Titular</td><td>2</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Henrique</a></td><td>ZAG</td><td class="numero">63</td><td>Amarelão</td><td>Reserva</td><td>1</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Rafael</a></td><td>MEI</td><td class="numero">77</td><td>-</td><td>Titular</td><td>3</td><td>1</td></tr>
+                            <tr><td><a href="jogador.html">Caio</a></td><td>MEI</td><td class="numero">70</td><td>-</td><td>Titular</td><td>3</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Mateus</a></td><td>MEI</td><td class="numero">73</td><td>Marrento</td><td>Titular</td><td>3</td><td>1</td></tr>
+                            <tr><td><a href="jogador.html">João</a></td><td>MEI</td><td class="numero">63</td><td>-</td><td>Reserva</td><td>0</td><td>0</td></tr>
+                            <tr><td><a href="jogador.html">Lucas</a></td><td>ATA</td><td class="numero">83</td><td>Casca-grossa</td><td>Titular</td><td>3</td><td>3</td></tr>
+                            <tr><td><a href="jogador.html">Pedro</a></td><td>ATA</td><td class="numero">73</td><td>-</td><td>Titular</td><td>3</td><td>1</td></tr>
+                            <tr><td><a href="jogador.html">Vitor</a></td><td>ATA</td><td class="numero">77</td><td>-</td><td>Titular</td><td>3</td><td>2</td></tr>
+                            <tr><td><a href="jogador.html">Igor</a></td><td>ATA</td><td class="numero">63</td><td>-</td><td>Reserva</td><td>0</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📊 Classificação</h2>
+                <div class="rolagem">
+                    <table>
+                        <thead>
+                            <tr><th>#</th><th>Time</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr class="meu-time"><td>1</td><td>🛡️ Atlético FC</td><td><b>7</b></td><td>3</td><td>2</td><td>1</td><td>0</td><td>4</td></tr>
+                            <tr><td>2</td><td>🌊 Grêmio Litoral</td><td><b>7</b></td><td>3</td><td>2</td><td>1</td><td>0</td><td>3</td></tr>
+                            <tr><td>3</td><td>⛰️ União Serrana</td><td><b>4</b></td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                            <tr><td>4</td><td>🔰 Real União</td><td><b>4</b></td><td>3</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+                            <tr><td>5</td><td>⚓ Porto Azul</td><td><b>3</b></td><td>3</td><td>1</td><td>0</td><td>2</td><td>-2</td></tr>
+                            <tr><td>6</td><td>🌄 Esporte Vale</td><td><b>1</b></td><td>3</td><td>0</td><td>1</td><td>2</td><td>-6</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="coluna">
+            <div class="card destaque">
+                <p class="sutil">PRÓXIMA PARTIDA • RODADA 4 DE 10</p>
+                <div class="confronto">
+                    <div><span class="escudo">🌊</span><b>Grêmio Litoral</b></div>
+                    <span class="vs">VS</span>
+                    <div><span class="escudo">🛡️</span><b>Atlético FC</b></div>
+                </div>
+                <a class="botao-amarelo" href="partida.html">SIMULAR PARTIDA</a>
+                <p class="centro"><a href="resultado.html">Ver último resultado</a></p>
+            </div>
+
+            <div class="card">
+                <h2>📋 Tática atual</h2>
+                <p class="linha"><span>Formação</span><b>4-3-3</b></p>
+                <p class="linha"><span>Estilo</span><b>Posse de bola</b></p>
+                <p class="linha"><span>Foco do treino</span><b>Finalização</b></p>
+                <a class="botao-verde" href="escalacao.html">Ajustar escalação</a>
+            </div>
+
+            <div class="card">
+                <h2>🏟️ Clube</h2>
+                <p class="linha"><span>Estádio</span><b>18.000 lugares</b></p>
+                <p class="linha"><span>Torcedores</span><b>12.450</b></p>
+                <p class="linha"><span>Patrocínio (temporada)</span><b class="dinheiro">R$ 850.000</b></p>
+                <p class="linha"><span>Caixa</span><b class="dinheiro">R$ 3.912.400</b></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

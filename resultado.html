@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuteBras - Resultado</title>
+    <!-- comum.css primeiro (base), depois o CSS só desta página -->
+    <link rel="stylesheet" href="comum.css">
+    <link rel="stylesheet" href="partida.css">
+</head>
+<body>
+<!-- PROTÓTIPO NÃO FUNCIONAL: dados fictícios escritos direto no HTML. Só os links de navegação funcionam. -->
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+    <div>
+        <h1>⚽ FuteBras</h1>
+        <p>Técnico e dirigente</p>
+    </div>
+    <nav>
+        <a href="painel.html">Painel</a>
+        <a href="escalacao.html">Escalação</a>
+        <a href="partida.html" class="ativo">Partida</a>
+        <a href="jogador.html">Jogadores</a>
+        <a href="index.html">Sair</a>
+    </nav>
+</header>
+
+<main>
+    <h2>🏆 Resultado da partida</h2>
+    <div class="grade">
+        <div class="card">
+            <div class="centro">
+                <span class="selo vitoria">VITÓRIA</span>
+                <p class="sutil">CAMPEONATO NACIONAL • RODADA 4</p>
+                <div class="confronto">
+                    <div><span class="escudo">🌊</span><b>Grêmio Litoral</b></div>
+                    <div class="placar-numero">1 x 2</div>
+                    <div><span class="escudo">🛡️</span><b>Atlético FC</b></div>
+                </div>
+            </div>
+            <table>
+                <thead><tr><th colspan="3">Resumo dos gols</th></tr></thead>
+                <tbody>
+                    <tr><td>12'</td><td>⚽ <b>Lucas</b></td><td class="sutil">Atlético FC</td></tr>
+                    <tr><td>48'</td><td>⚽ <b>Renan</b></td><td class="sutil">Grêmio Litoral</td></tr>
+                    <tr><td>77'</td><td>⚽ <b>Vitor</b></td><td class="sutil">Atlético FC</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="coluna">
+            <div class="card">
+                <h2>📈 Evolução da equipe</h2>
+                <p class="linha"><span>Moral</span><b>64 → 72 (+8)</b></p>
+                <p class="linha"><span>Entrosamento</span><b>68 → 70 (+2)</b></p>
+                <p>🏋️ Treino de Finalização: Pedro, Mateus evoluíram +1</p>
+                <p class="aviso">⚠️ João (reserva) pediu mais minutos em campo</p>
+            </div>
+
+            <div class="card">
+                <h2>💰 Finanças da rodada</h2>
+                <p class="linha"><span>Direitos de transmissão</span><b>+ R$ 60.000</b></p>
+                <p class="linha"><span>Patrocínio</span><b>+ R$ 85.000</b></p>
+                <p class="linha"><span>Premiação por vitória</span><b>+ R$ 50.000</b></p>
+                <p class="linha"><span>Salários</span><b>− R$ 212.000</b></p>
+                <p class="linha"><span>Manutenção do estádio</span><b>− R$ 30.000</b></p>
+                <p class="linha total"><span>Saldo</span><b class="negativo">−R$ 47.000</b></p>
+                <p class="linha"><span>Caixa após a rodada</span><b>R$ 3.865.400</b></p>
+            </div>
+
+            <a class="botao-amarelo" href="painel.html">VOLTAR AO PAINEL</a>
+            <a class="botao-verde" href="partida.html">Próxima partida</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

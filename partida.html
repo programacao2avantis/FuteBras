@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuteBras - Partida</title>
+    <!-- comum.css primeiro (base), depois o CSS só desta página -->
+    <link rel="stylesheet" href="comum.css">
+    <link rel="stylesheet" href="partida.css">
+</head>
+<body>
+<!-- PROTÓTIPO NÃO FUNCIONAL: dados fictícios escritos direto no HTML. Só os links de navegação funcionam. -->
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+    <div>
+        <h1>⚽ FuteBras</h1>
+        <p>Técnico e dirigente</p>
+    </div>
+    <nav>
+        <a href="painel.html">Painel</a>
+        <a href="escalacao.html">Escalação</a>
+        <a href="partida.html" class="ativo">Partida</a>
+        <a href="jogador.html">Jogadores</a>
+        <a href="index.html">Sair</a>
+    </nav>
+</header>
+
+<main>
+    <h2>🏟️ Pré-jogo</h2>
+    <div class="grade">
+        <div class="card destaque">
+            <p class="sutil">RODADA 4 DE 10 • FORA DE CASA</p>
+            <div class="confronto">
+                <div><span class="escudo">🌊</span><b>Grêmio Litoral</b></div>
+                <span class="vs">VS</span>
+                <div><span class="escudo">🛡️</span><b>Atlético FC</b></div>
+            </div>
+            <h2>⚖️ Comparação</h2>
+                <p class="linha"><span>Ataque</span><b>83 <span class="sutil">x</span> 77 <small class="dinheiro">(+6)</small></b></p>
+                <p class="linha"><span>Meio</span><b>78 <span class="sutil">x</span> 77 <small class="dinheiro">(+1)</small></b></p>
+                <p class="linha"><span>Defesa</span><b>76 <span class="sutil">x</span> 77 <small class="negativo">(-1)</small></b></p>
+            <p class="sutil">Seu time x Grêmio Litoral</p>
+        </div>
+
+        <div class="coluna">
+            <div class="card">
+                <h2>📋 Sua tática</h2>
+                <p class="linha"><span>Formação</span><b>4-3-3</b></p>
+                <p class="linha"><span>Estilo</span><b>Posse de bola</b></p>
+                <p class="linha"><span>Marcação</span><b>50</b></p>
+                <p class="linha"><span>Intensidade</span><b>50</b></p>
+                <p class="linha"><span>Foco do treino</span><b>Finalização</b></p>
+                <a class="botao-verde" href="escalacao.html">Ajustar escalação</a>
+            </div>
+            <a class="botao-amarelo" href="resultado.html">INICIAR PARTIDA</a>
+            <a class="botao-cinza" href="painel.html">Voltar ao painel</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

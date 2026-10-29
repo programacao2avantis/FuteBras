@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuteBras - Escalação</title>
+    <!-- comum.css primeiro (base), depois o CSS só desta página -->
+    <link rel="stylesheet" href="comum.css">
+    <link rel="stylesheet" href="escalacao.css">
+</head>
+<body>
+<!-- PROTÓTIPO NÃO FUNCIONAL: dados fictícios escritos direto no HTML. Só os links de navegação funcionam. -->
+
+<!-- ===================== CABEÇALHO ===================== -->
+<header>
+    <div>
+        <h1>⚽ FuteBras</h1>
+        <p>Técnico e dirigente</p>
+    </div>
+    <nav>
+        <a href="painel.html">Painel</a>
+        <a href="escalacao.html" class="ativo">Escalação</a>
+        <a href="partida.html">Partida</a>
+        <a href="jogador.html">Jogadores</a>
+        <a href="index.html">Sair</a>
+    </nav>
+</header>
+
+<main>
+    <h2>📋 Escalação e tática</h2>
+    <p class="sutil">Escolha quem joga em cada vaga. Jogador fora da posição perde overall.</p>
+
+    <div class="grade">
+        <div class="card">
+            <h2>⚽ Time titular</h2>
+            <div class="campo">
+            <div class="linha-campo">
+                <div class="vaga">
+                    <span class="posicao">ATA • 77</span>
+                    <select aria-label="Vaga ATA"><option>Vitor (ATA) 77</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">ATA • 86</span>
+                    <select aria-label="Vaga ATA"><option>Lucas (ATA) 86</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">ATA • 73</span>
+                    <select aria-label="Vaga ATA"><option>Pedro (ATA) 73</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+            </div>
+            <div class="linha-campo">
+                <div class="vaga">
+                    <span class="posicao">MEI • 70</span>
+                    <select aria-label="Vaga MEI"><option>Caio (MEI) 70</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">MEI • 77</span>
+                    <select aria-label="Vaga MEI"><option>Rafael (MEI) 77</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">MEI • 75</span>
+                    <select aria-label="Vaga MEI"><option>Mateus (MEI) 75</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+            </div>
+            <div class="linha-campo">
+                <div class="vaga">
+                    <span class="posicao">ZAG • 67</span>
+                    <select aria-label="Vaga ZAG"><option>Gustavo (ZAG) 67</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">ZAG • 76</span>
+                    <select aria-label="Vaga ZAG"><option>Bruno (ZAG) 76</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">ZAG • 73</span>
+                    <select aria-label="Vaga ZAG"><option>Thiago (ZAG) 73</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+                <div class="vaga">
+                    <span class="posicao">ZAG • 70</span>
+                    <select aria-label="Vaga ZAG"><option>Felipe (ZAG) 70</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+            </div>
+            <div class="linha-campo">
+                <div class="vaga">
+                    <span class="posicao">GOL • 80</span>
+                    <select aria-label="Vaga GOL"><option>André (GOL) 80</option></select>
+                    <a class="ver-jogador" href="jogador.html">ver jogador</a>
+                </div>
+            </div>
+            </div>
+            <a class="botao-verde" href="escalacao.html">Escalar o melhor time automaticamente</a>
+        </div>
+
+        <div class="coluna">
+            <div class="card">
+                <h2>🎯 Controles táticos</h2>
+
+                <label for="formacao">Formação</label>
+                <select id="formacao">
+                    <option selected>4-3-3</option>
+                    <option>4-4-2</option>
+                    <option>3-5-2</option>
+                    <option>5-3-2</option>
+                </select>
+
+                <label for="estilo">Estilo / postura</label>
+                <select id="estilo">
+                    <option selected>Posse de bola</option>
+                    <option>Jogo reativo</option>
+                    <option>Ataque intenso</option>
+                    <option>Defesa</option>
+                </select>
+
+                <label for="marcacao">Marcação: <b>50</b></label>
+                <input id="marcacao" type="range" min="0" max="100" value="50">
+
+                <label for="intensidade">Intensidade: <b>50 (2 lances por bloco)</b></label>
+                <input id="intensidade" type="range" min="0" max="100" value="50">
+
+                <label for="treino">Foco do treino</label>
+                <select id="treino">
+                    <option selected>Finalização</option>
+                    <option>Drible</option>
+                    <option>Passe</option>
+                    <option>Marcação</option>
+                    <option>Desarme</option>
+                    <option>Velocidade</option>
+                    <option>Resistência</option>
+                    <option>Força</option>
+                    <option>Goleiro</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <h2>💪 Força dos setores</h2>
+                <p class="linha"><span>Ataque</span><b>83</b></p>
+                <div class="barra"><div style="width:83%"></div></div>
+                <p class="linha"><span>Meio</span><b>78</b></p>
+                <div class="barra"><div style="width:78%"></div></div>
+                <p class="linha"><span>Defesa</span><b>76</b></p>
+                <div class="barra"><div style="width:76%"></div></div>
+                <p class="linha total"><span>Overall do clube</span><b>79</b></p>
+            </div>
+
+            <div class="card">
+                <h2>👥 Reservas</h2>
+                <p class="linha"><span><a href="jogador.html">Marcos</a> <small>GOL</small></span><b>70</b></p>
+                <p class="linha"><span><a href="jogador.html">Henrique</a> <small>ZAG</small></span><b>63</b></p>
+                <p class="linha"><span><a href="jogador.html">João</a> <small>MEI</small></span><b>63</b></p>
+                <p class="linha"><span><a href="jogador.html">Igor</a> <small>ATA</small></span><b>63</b></p>
+            </div>
+
+            <a class="botao-amarelo" href="partida.html">IR PARA A PARTIDA</a>
+            <a class="botao-cinza" href="painel.html">Voltar ao painel</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
