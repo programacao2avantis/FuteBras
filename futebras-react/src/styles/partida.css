@@ -1,0 +1,18 @@
+/* =====================================================================
+   FuteBras (protótipo) - partida.css
+   Estilos do partida.html (pré-jogo) e do resultado.html.
+   Carregado DEPOIS do comum.css (usa as cores definidas em :root lá).
+   ===================================================================== */
+
+/* ===== Placar ===== */
+.placar-numero { font-size: 46px; font-weight: bold; }
+
+.selo { display: inline-block; padding: 5px 14px; border-radius: 5px; font-weight: bold; }
+.selo.vitoria { background: var(--amarelo); }
+.selo.empate  { background: #dcd9cf; }
+.selo.derrota { background: var(--vermelho); color: white; }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .placar-numero { font-size: 34px; }
+}

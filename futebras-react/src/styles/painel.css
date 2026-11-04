@@ -1,0 +1,19 @@
+/* =====================================================================
+   FuteBras (protótipo) - painel.css
+   Estilos SÓ do painel.html: indicadores do topo.
+   Carregado DEPOIS do comum.css (usa as cores definidas em :root lá).
+   ===================================================================== */
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.indicadores span { font-weight: bold; }
+.indicadores strong { float: right; font-size: 28px; color: var(--verde); }
+.indicadores small { color: var(--cinza); }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .indicadores { grid-template-columns: repeat(2, 1fr); }
+}
