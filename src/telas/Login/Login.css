@@ -1,0 +1,29 @@
+/* =====================================================================
+   FuteBras - Login.css
+   Estilos SÓ da tela de login (antes ficavam no painel.css).
+   ===================================================================== */
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 760px;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+}
+.login-lado {
+    background: var(--verde-escuro);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-lado p { color: #c9d6cd; }
+.login-form { background: var(--card); padding: 30px; }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .login { grid-template-columns: 1fr; }
+}

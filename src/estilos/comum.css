@@ -1,0 +1,161 @@
+/* =====================================================================
+   FuteBras - comum.css
+   Estilos usados por TODAS as telas: cores, cards, botões,
+   formulários, tabelas, barras, perks e o confronto (painel e partida).
+   É importado uma vez no main.jsx. Cada tela importa o próprio CSS.
+   O cabeçalho foi para src/componentes/Cabecalho.css.
+   ===================================================================== */
+
+/* ===== Cores do protótipo (PDF) ===== */
+:root {
+    --verde-escuro: #12291d;
+    --verde: #1f7a4a;
+    --amarelo: #f2c230;
+    --fundo: #f2efe7;
+    --card: #faf9f5;
+    --borda: #e0ddd3;
+    --texto: #1c2620;
+    --cinza: #6b6f68;
+    --vermelho: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+h1, h2 { margin: 0 0 12px; }
+h2 { font-size: 18px; }
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 25px auto;
+}
+
+
+/* ===== Cards e grades ===== */
+.card {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+.destaque { border: 2px solid var(--verde-escuro); }
+.centro { text-align: center; }
+
+.grade {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+/* Barra de progresso: a largura da div interna é definida pelo JS */
+.barra {
+    background: #dcd9cf;
+    height: 7px;
+    border-radius: 4px;
+    margin: 8px 0;
+    clear: both;
+}
+.barra div {
+    background: var(--verde);
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Linha "rótulo ............ valor" */
+.linha {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.linha.total { border-top: 1px solid var(--borda); padding-top: 8px; }
+
+.sutil { color: var(--cinza); font-size: 13px; }
+.dinheiro { color: var(--verde); }
+.negativo { color: var(--vermelho); }
+.erro { color: var(--vermelho); }
+.aviso { background: #fdf3d3; padding: 6px 8px; border-radius: 6px; font-size: 14px; }
+
+.perk {
+    display: inline-block;
+    background: var(--amarelo);
+    border: 1px solid #8a6d10;
+    padding: 4px 9px;
+    border-radius: 5px;
+    margin: 3px 3px 3px 0;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: help;
+}
+
+/* ===== Formulários e botões ===== */
+label { display: block; margin: 14px 0 5px; font-size: 13px; color: var(--cinza); }
+select, input[type="email"], input[type="password"], input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background: white;
+    font-size: 15px;
+}
+input[type="range"] { width: 100%; accent-color: var(--verde-escuro); }
+
+button { font-size: 15px; }
+.botao-amarelo, .botao-verde, .botao-cinza {
+    display: block;          /* vale também para <a> com essas classes */
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+}
+.botao-amarelo { background: var(--amarelo); color: var(--texto); }
+.botao-amarelo:hover { background: #e0b11f; }
+.botao-verde { background: var(--verde); color: white; }
+.botao-verde:hover { background: #18633b; }
+.botao-cinza { background: #dcd9cf; color: var(--texto); font-weight: normal; }
+.botao-cinza:hover { background: #cfccc1; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+
+button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible {
+    outline: 3px solid var(--amarelo);
+    outline-offset: 2px;
+}
+
+/* ===== Tabelas ===== */
+.rolagem { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: #ebe8df; color: var(--cinza); font-size: 12px; text-align: left; }
+th, td { padding: 9px; border-bottom: 1px solid var(--borda); }
+td a { color: var(--texto); font-weight: bold; }
+.numero { color: var(--verde); font-weight: bold; }
+.meu-time { background: #e3f1e8; font-weight: bold; }
+
+/* ===== Confronto (usado no painel e na partida) ===== */
+.confronto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+}
+.confronto div { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.escudo { font-size: 34px; }
+.vs { color: var(--cinza); font-weight: bold; }
+
+/* ===== Celular (partes comuns) ===== */
+@media (max-width: 800px) {
+    .grade { grid-template-columns: 1fr; }
+}

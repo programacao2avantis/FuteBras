@@ -1,0 +1,55 @@
+/* =====================================================================
+   FuteBras - Jogador.css
+   Estilos SÓ da tela do jogador: cartão, controles de habilidade e navegação.
+   Usa as cores definidas em :root no comum.css.
+   ===================================================================== */
+
+/* ===== Grade de 3 colunas ===== */
+.detalhes-jogador { grid-template-columns: 1fr 1fr 1fr; }
+
+/* ===== Jogador ===== */
+.avatar { font-size: 60px; }
+.overall-grande {
+    display: inline-block;
+    border: 2px solid var(--verde);
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+/* ===== Página do jogador ===== */
+.barra-jogadores {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 18px;
+    max-width: 420px;
+}
+.botao-pequeno {
+    background: var(--verde-escuro);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 13px;
+    cursor: pointer;
+}
+.botao-pequeno:hover { background: var(--verde); }
+
+.hab-controle label {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0 2px;
+    color: var(--texto);
+    font-size: 14px;
+}
+.delta { font-weight: bold; }
+.delta.mais { color: var(--verde); }
+.delta.menos { color: var(--vermelho); }
+.melhor { background: #e3f1e8; border-radius: 5px; padding: 0 6px; }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .detalhes-jogador { grid-template-columns: 1fr; }
+}

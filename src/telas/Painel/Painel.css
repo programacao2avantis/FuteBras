@@ -1,0 +1,20 @@
+/* =====================================================================
+   FuteBras - Painel.css
+   Estilos SÓ da tela do painel: indicadores.
+   Usa as cores definidas em :root no comum.css.
+   ===================================================================== */
+
+/* ===== Indicadores (Overall, Moral, Entrosamento, Reputação) ===== */
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.indicadores span { font-weight: bold; }
+.indicadores strong { float: right; font-size: 28px; color: var(--verde); }
+.indicadores small { color: var(--cinza); }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .indicadores { grid-template-columns: repeat(2, 1fr); }
+}

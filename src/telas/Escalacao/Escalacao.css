@@ -1,0 +1,44 @@
+/* =====================================================================
+   FuteBras - Escalacao.css
+   Estilos SÓ da tela de escalação: o campo e as vagas.
+   Usa as cores definidas em :root no comum.css.
+   ===================================================================== */
+
+/* ===== Campo da escalação ===== */
+.campo {
+    background: #2e7d4f;
+    border: 3px solid white;
+    outline: 2px solid #2e7d4f;
+    border-radius: 6px;
+    padding: 18px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.linha-campo { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.vaga {
+    background: white;
+    border-radius: 8px;
+    padding: 6px;
+    width: 150px;
+    text-align: center;
+}
+.vaga.fora-posicao { background: #ffe1dc; }
+.vaga select { font-size: 13px; padding: 5px; }
+.posicao {
+    display: inline-block;
+    background: var(--amarelo);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+/* ===== Escalação: link "ver jogador" dentro da vaga ===== */
+.ver-jogador { display: block; font-size: 12px; margin-top: 4px; color: var(--verde); }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .vaga { width: 130px; }
+}

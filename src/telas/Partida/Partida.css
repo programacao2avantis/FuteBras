@@ -1,0 +1,32 @@
+/* =====================================================================
+   FuteBras - Partida.css
+   Estilos SÓ da tela de partida: placar, selo de resultado e relógio.
+   Usa as cores definidas em :root no comum.css.
+   ===================================================================== */
+
+/* ===== Placar ===== */
+.placar-numero { font-size: 46px; font-weight: bold; }
+
+.selo { display: inline-block; padding: 5px 14px; border-radius: 5px; font-weight: bold; }
+.selo.vitoria { background: var(--amarelo); }
+.selo.empate  { background: #dcd9cf; }
+.selo.derrota { background: var(--vermelho); color: white; }
+
+/* ===== Partida ao vivo ===== */
+.relogio {
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+}
+.gol-novo td { animation: gol 1.2s ease-out; }
+@keyframes gol { from { background: var(--amarelo); } to { background: transparent; } }
+@media (prefers-reduced-motion: reduce) {
+    .gol-novo td { animation: none; }
+}
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .placar-numero { font-size: 34px; }
+}

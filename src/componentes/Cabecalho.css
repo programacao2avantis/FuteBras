@@ -1,0 +1,37 @@
+/* =====================================================================
+   FuteBras - Cabecalho.css
+   Estilos do cabeçalho e do menu (antes ficavam no comum.css).
+   ===================================================================== */
+
+.cabecalho {
+    background: var(--verde-escuro);
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 4px solid var(--verde);
+}
+.cabecalho h1 { font-size: 24px; margin: 0; }
+.cabecalho p { margin: 4px 0 0; color: #c9d6cd; font-size: 14px; }
+
+.menu button, .menu a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+    background: #2b4a39;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+.menu button:hover, .menu a:hover, .menu a.ativo { background: var(--verde); }
+
+/* ===== Celular ===== */
+@media (max-width: 800px) {
+    .menu button, .menu a { margin: 0 6px 6px 0; }
+}
